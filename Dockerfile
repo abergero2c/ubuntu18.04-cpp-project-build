@@ -4,6 +4,7 @@ RUN apt update && \
 	pkg-config valgrind libboost-all-dev language-pack-en-base libboost-python-dev python3-dev \
 	libsuperlu-dev libopenblas-dev sshpass zlib1g-dev\
 	clang-tidy clang libboost-all-dev wget valgrind python-yaml fontconfig python-pip python3-pip\
+	libeigen3-dev libsdl2-dev libglew-dev curl \
  && rm -rf /var/lib/apt/lists/* 
 RUN apt update && \
     apt install -y clang-9 clang-tidy-9
