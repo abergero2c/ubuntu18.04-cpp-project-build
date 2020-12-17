@@ -13,4 +13,7 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 RUN pip install conan
+RUN apt update && apt install -y libopenblas-base libsuperlu-dev && \
+    wget -q -O worhp_1.14-0~ubuntu1804.deb https://seafile.zfn.uni-bremen.de/f/27970eb862214d609dbe/?dl=1 && \
+    chmod +x worhp_1.14-0~ubuntu1804.deb && apt-get install -y ./worhp_1.14-0~ubuntu1804.deb
 ENV LANG en_US.utf-8
